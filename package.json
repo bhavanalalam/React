@@ -1,0 +1,28 @@
+{
+  "name": "reactprj",
+  "version": "1.0.0",
+  "description": "react app",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhavanalalam/React.git"
+  },
+  "keywords": [
+    "react",
+    "app",
+    "npm",
+    "movie"
+  ],
+  "author": "Bhavana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhavanalalam/React/issues"
+  },
+  "homepage": "https://github.com/bhavanalalam/React#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
