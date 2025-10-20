@@ -1,13 +1,29 @@
-const Body =()=>{
-    return(
-        <div className="fooditems-grid">
-
-           {console.log(restob)}
-           {restob.data.cards[1].card.card.gridElements.infoWithStyle.restaurants.map(
+import {resObj} from "./App";
+import { ResCard } from "./ResCard";
+import TopBar from './TopBar';
+const Body = () => {
+  return (
+    <div>
+      <TopBar />
+    <div className="food-grid"  
+     style={{
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap", 
+        gap: "20px",      
+        justifyContent: "center" ,
+       
+      }}
+    >
+      {console.log(resObj)}
+      {resObj.data.cards[1].card.card.gridElements.infoWithStyle.restaurants.map(
         (res) => {
-          return <RCard key={res.info.id} restob={res} />;
+          return <ResCard key={res.info.id} resObj={res} />;
         }
       )}
-    </div> 
-    )
+    </div>
+    </div>
+  );
+ 
 };
+export default Body;

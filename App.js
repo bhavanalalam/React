@@ -1,11 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Header from "../Header";
+import Header from "./Header";
+import Body from "./Body";
+import Footer from "./Footer";
+import './App.css';
 var reactElement = document.getElementById("root");
 var reactRoot = createRoot(reactElement);
-
-const restob={
-statusCode: 0,
+export const resObj = {
+  statusCode: 0,
   data: {
     statusMessage: "done successfully",
     pageOffset: {
@@ -902,11 +904,11 @@ statusCode: 0,
                   {
                     info: {
                       id: "112148",
-                      name: "Mr.Little Idli",
+                      name: "Sai Ram Tiffins",
                       cloudinaryImageId: "ubi9rqbumwnjz63ua8qp",
-                      locality: "MVP Double road",
-                      areaName: " MVP  Colony",
-                      costForTwo: "₹250 for two",
+                      locality: "Daimond Park",
+                      areaName: "Rtc Complex",
+                      costForTwo: "₹150 for two",
                       cuisines: ["South Indian"],
                       avgRating: 4.1,
                       veg: true,
@@ -7506,6 +7508,7 @@ statusCode: 0,
   deviceId: "9a768c15-bbdc-d4c1-2454-0f6c75a62bc4",
   csrfToken: "teT0uXkKYb0s-mmbkHzR2LTo5pBNkM-Azy4FqXoA",
 };
+
 const App = () => {
   return (
     <>
@@ -7516,50 +7519,4 @@ const App = () => {
   );
 };
 
-
-const RCard = (props) => {
-let{cloudinaryImageId,name,locality,costForTwo,areaName,cuisines} = props.restob.info;
-  return (
-    <div className="card">
-      <img
-        className="poster"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          props.restob.info.cloudinaryImageId
-        }
-        height="200"
-        width="100"
-      />
-      <div className="meta">
-        <strong>{name}</strong> 
-        <p>{locality}</p>
-        <p>{costForTwo}</p>
-        <p>{areaName}</p>
-        <p>{cuisines.join(",")}</p> 
-      </div>
-      <div className="rating">★ {avgRating}</div>
-    </div>
-  );
-};
-const Body =()=>{
-    return(
-        <div className="fooditems-grid">
-
-           {console.log(restob)}
-           {restob.data.cards[1].card.card.gridElements.infoWithStyle.restaurants.map(
-        (res) => {
-          return <RCard key={res.info.id} restob={res} />;
-        }
-      )}
-    </div> 
-    )
-};
-const Footer = () => {
-  return (
-    <div style={{ color: "green" }}>
-      <h1>Footer Component</h1>
-    </div>
-  );
-};
-reactRoot.render(<App></App>)
-  
+reactRoot.render(<App />);
