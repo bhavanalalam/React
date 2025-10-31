@@ -2,7 +2,6 @@
   "name": "reactprj",
   "version": "1.0.0",
   "description": "react app",
-  "main": "index.html",
   "scripts": {
     "test": "jest"
   },
@@ -14,7 +13,7 @@
     "react",
     "app",
     "npm",
-    "movie"
+    "food"
   ],
   "author": "Bhavana",
   "license": "ISC",
@@ -24,5 +23,10 @@
   "homepage": "https://github.com/bhavanalalam/React#readme",
   "devDependencies": {
     "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.9.5"
   }
 }

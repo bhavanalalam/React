@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ResCard } from "./ResCard";
+import  ResCard  from "./ResCard";
 import TopBar from "./TopBar";
 
 const Body = () => {

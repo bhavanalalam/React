@@ -1,8 +1,17 @@
-export const ResCard = (props) => {
-  console.log(props);
+
+import { useNavigate } from "react-router";
+
+ const ResCard = (props) => {
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+  navigate(`/resmenu/${props.resObj.info.id}`);
+};
+
   return (
-    <div className="card" 
+    <div className="card" onClick={handleClick}   
       style={{
+        cursor: 'pointer',
         width: "220px",
         backgroundColor: "#fff",
         padding: "12px",
@@ -33,3 +42,4 @@ export const ResCard = (props) => {
     </div>
   );
 };
+export default ResCard ;
